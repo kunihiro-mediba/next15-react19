@@ -1,0 +1,16 @@
+services:
+  next:
+    container_name: next15-react19-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - default
+    ports:
+      - "3000:3000"
+    # init: true
+
+networks:
+  default:
+    name: next15-react19-network-default
+    driver: bridge
